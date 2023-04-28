@@ -1,0 +1,18 @@
+NOTE SULL'AVVIO DELL'APPLICAZIONE:
+
+----------LATO CLIENT------------------
+Abbiamo utilizzato Visual Studio Community, servono le librerie:
+-Nethereum.Web3 (4.14.0>)
+-Newtonsoft.Json (13.0.2>)
+-System.Text.Json (7.0.1>)
+
+C'è un file che potrebbe creare problemi perché si chiama UCOnlineWait.resx, si trova dentro "progettoIOT\Client\Client\Prova\Prova\UserControls\Game". Se dà errori andare sulle proprietà del file e fare "Annulla Blocco".
+
+---------LATO SERVER------------------
+-Serve un database MongoDB, perché le domande vengono caricate li allo start-up. Inoltre anche lo username dei giocatori viene salvato lì.
+-Se si vuole cambiare l'admin dell'applicazione fare una ricerca tra i file e andare a sostituire la chiave privata e pubblica con quelle desiderate.
+	ADMIN
+	pub: 0x215c175B7c457950C47D160C3363DF9484Ac99ab
+	priv: 031f7a27e82a0ce372015476b3165cc7a1ae0c8d33fe6c690fe2db270b3782a2
+
+Note Aggiuntive: lo username, punteggi locali, classifiche e contenuti vari che si trovano all'interno del progetto (commentati o inutilizzati) sono pensati per implementazioni future. All'interno dell'applicazione solamente la chiave dell'admin è salvata, quindi tutte le altre transazioni (che non coinvolgono l'admin) necessitano dell'estensione Metamask installata e attiva sul browser per essere firmate.
